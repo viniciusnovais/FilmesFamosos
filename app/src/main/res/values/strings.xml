@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Filmes Famosos</string>
+    <string name="titulo">Título</string>
+    <string name="sinopse">Sinopse</string>
+    <string name="data_lancamento">Data lançamento</string>
+    <string name="avaliacao">Avaliação</string>
+    <string name="populares">Populares</string>
+    <string name="melhores">Melhores</string>
+    <string name="sem_internet">Sem internet</string>
+    <string name="carregando">Carregando...</string>
+    <string name="erro">Erro</string>
+    <string name="lista_vazia">Não há filmes</string>
+</resources>

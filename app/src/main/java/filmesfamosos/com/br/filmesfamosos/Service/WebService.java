@@ -24,7 +24,7 @@ public class WebService {
         try {
             jsonObject =
                     new JSONObject(
-                            NetWorking.makeRequest("http://api.themoviedb.org/3/movie/popular?api_key=5ef17c68d28274d819abdd71c6fd31bc"));
+                            NetWorking.makeRequest("http://api.themoviedb.org/3/movie/popular?api_key=yourkey"));
 
             JSONArray jsonArray = (JSONArray) jsonObject.get("results");
             for (int i = 0; i < jsonArray.length(); i++) {
@@ -64,7 +64,7 @@ public class WebService {
         try {
             jsonObject =
                     new JSONObject(
-                            NetWorking.makeRequest("http://api.themoviedb.org/3/movie/top_rated?api_key=5ef17c68d28274d819abdd71c6fd31bc"));
+                            NetWorking.makeRequest("http://api.themoviedb.org/3/movie/top_rated?api_key=yourkey"));
 
             JSONArray jsonArray = (JSONArray) jsonObject.get("results");
             for (int i = 0; i < jsonArray.length(); i++) {

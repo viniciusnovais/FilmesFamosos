@@ -6,18 +6,11 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.squareup.picasso.Picasso;
-
-import java.security.GuardedObject;
-import java.util.ArrayList;
 import java.util.List;
 
 import filmesfamosos.com.br.filmesfamosos.Adapter.FilmesListAdapter;
@@ -142,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
                 } else {
-                    Toast.makeText(MainActivity.this, getString(R.string.erro), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, lista.get(0).getMsgErro(), Toast.LENGTH_SHORT).show();
                 }
             } else {
                 Toast.makeText(MainActivity.this, getString(R.string.lista_vazia), Toast.LENGTH_SHORT).show();

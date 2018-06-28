@@ -5,6 +5,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,6 +53,9 @@ public class WebService {
         } catch (JSONException e) {
             lista.add(new Movie(e.getMessage()));
             return lista;
+        } catch (IOException e) {
+            lista.add(new Movie(e.getMessage()));
+            return lista;
         }
 
         return lista;
@@ -90,6 +94,9 @@ public class WebService {
 
 
         } catch (JSONException e) {
+            lista.add(new Movie(e.getMessage()));
+            return lista;
+        } catch (IOException e) {
             lista.add(new Movie(e.getMessage()));
             return lista;
         }

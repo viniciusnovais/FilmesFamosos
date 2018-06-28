@@ -15,7 +15,7 @@ import java.net.URL;
 
 public class NetWorking {
 
-    public static String makeRequest(String urlString){
+    public static String makeRequest(String urlString) throws IOException{
 
         HttpURLConnection httpURLConnection = null;
         BufferedReader reader = null;
@@ -30,7 +30,7 @@ public class NetWorking {
             httpURLConnection.connect();
 
             InputStream inputStream = httpURLConnection.getInputStream();
-            StringBuffer buffer = new StringBuffer();
+            StringBuilder buffer = new StringBuilder();
 
             if (inputStream ==null){
                 return null;
@@ -40,7 +40,7 @@ public class NetWorking {
             String line;
 
             while ((line = reader.readLine()) != null){
-                buffer.append(line+"\n");
+                buffer.append(line.concat("\n"));
             }
 
             if (buffer.length() == 0){
@@ -48,9 +48,6 @@ public class NetWorking {
             }
 
             result = buffer.toString();
-
-        }catch (IOException e){
-            return null;
         }finally {
 
             if (httpURLConnection !=null){
